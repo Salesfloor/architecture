@@ -1,18 +1,8 @@
 # CSS Coding Standards
 
-## Contents 
 
-* [Philosophy](#philosophy)
-* [Architecture](#architecture)
-* [Coding Style](#coding-style)
-	* [Selectors](#selectors)
-	* [Values](#values)
-	* [Formatting](#formatting)
-	* [Magic numbers and absolutes](#magic-numbers-and-absolutes)
-	* [Commenting](#commenting)
-	* [Important](#important)
-* [Resources](#resources)
-* [Credits](#credits)
+[Documentation](http://documentup.com/Salesfloor/css-architecture?theme=v1)
+
 
 ## Philosophy
 

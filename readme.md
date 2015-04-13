@@ -15,40 +15,43 @@
 
 ## Architecture
 
-* The source order is designed to take advantage of inheritance in the cascade with the goal of  writing DRYer code.
-	* Reset
-	* Variables (used throughout the project)
-	* Mixins (used throughout the project)
-	* Patterns/Objects (any repeatable or extendable patterns/skeletons)
-	* Components (combinations of patterns/objects + extended styles)
-	* Sections (combinations of components)
-	* Utilities
+The source order is designed to take advantage of inheritance in the cascade with the goal of  writing DRYer code.
+
+* Reset
+* Variables (used throughout the project)
+* Mixins (used throughout the project)
+* Patterns/Objects (any repeatable or extendable patterns/skeletons)
+* Components (combinations of patterns/objects + extended styles)
+* Sections (combinations of components)
+* Utilities
 
  The source order:
- 	* Settings
- 		* Global variables
- 		* Configs
- 	* Tools
- 		* Mixins
- 		* Functions
-	* Base
-		* Reset
-	* Patterns
-		* Forms
-		* Buttons
-		* Alerts
-		* Etc.
-	* Components
-		* Video Player
-		* Newsletter Signup
-		* Etc.
-	* Sections (should have a very small amount of content)
-		* Confirmation page
-		* Rep listing page
-	* Themes
-		* retailers overrides
-	* Trumps
-		* Others overrides, helper
+
+ 
+* Settings
+	** Global variables
+	** Configs
+* Tools
+	** Mixins
+	** Functions
+* Base
+	** Reset
+* Patterns
+	** Forms
+	** Buttons
+	** Alerts
+	** Etc.
+* Components
+	** Video Player
+	** Newsletter Signup
+	** Etc.
+* Sections (should have a very small amount of content)
+	** Confirmation page
+	** Rep listing page
+* Themes
+	** retailers overrides
+* Trumps
+	** Others overrides, helper
 
 ## Coding Style
 

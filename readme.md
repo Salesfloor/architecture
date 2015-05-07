@@ -70,14 +70,24 @@ The source order:
 
 ### Values
 
-The line-height should always be a multiple of the vertical rhythm variable. All other values should be as relative as possible. (see [magic numbers and absolutes](#magic-numbers-and-absolutes))
+#### Units
 
-* All vertical spacing around elements should consider the vertical rhythm.
-* Use [single direction](http://csswizardry.com/2012/06/single-direction-margin-declarations/) (downward) margin declarations. This would mean only use margin-bottom, no margin-top, to keep a constant downward flow of elements.
-	* Easier to define vertical rhythm in one fell swoop.
-	* More confidence in (re)moving components if you know their margins all push in the same direction.
-	* Components and elements don't have to necessarily live in a certain order if their margins aren't dependent on adjoining sides.
-	* Not being concerned with collapsing margins means one less thing to worry about.
+* Use px for font-size, because it offers absolute control over text.
+
+* The line-height should always be a multiple of the vertical rhythm variable (unit-less).
+All other values should be as relative as possible. (see [magic numbers and absolutes](#magic-numbers-and-absolutes))
+	* All vertical spacing around elements should consider the vertical rhythm.
+	* Use [single direction](http://csswizardry.com/2012/06/single-direction-margin-declarations/) (downward) margin declarations. This would mean only use margin-bottom, no margin-top, to keep a constant downward flow of elements.
+		* Easier to define vertical rhythm in one fell swoop.
+		* More confidence in (re)moving components if you know their margins all push in the same direction.
+		* Components and elements don't have to necessarily live in a certain order if their margins aren't dependent on adjoining sides.
+		* Not being concerned with collapsing margins means one less thing to worry about.
+
+#### Colors
+
+* Colors should be set as variables for theming purpose.
+
+* Hex notation is prefered for convenience and shortness.
 
 ### Formatting
 
@@ -106,6 +116,26 @@ At most, aim for two levels. It is perfectly reasonable to use nesting when crea
 * Limits portability.
 * Less efficient.
 * If you cannot help it, step back and rethink your overall strategy (either the specificity needed, or the layout of the nesting).
+
+#### Organisation
+
+CSS attributes should be organized by types, like:
+
+```
+[selectors] {
+	//layout
+	margin: 0 0 0 0;
+	[property]: [value];
+
+	//skin
+	background: $background-color;
+	[property]: [value];
+
+	//typo
+	font-size: 12px;
+	[property]: [value];
+}
+```
 
 ### Naming conventions
 
@@ -149,6 +179,31 @@ This gives:
     <p class="profile__bio">...</p>
 
 </div>
+```
+*Note: Never reference js- prefixed class names from CSS files. js- are used exclusively from JS files.*
+
+### Semantic naming approach
+
+In CSS, a semantic naming approach implies that the class name describes the content it enclose, but not specifically. Also, never name your classe anything relater to a CSS property (like color, font-family, float, border, etc.). Name your elements based on what they are, not what they look like.
+
+Semantic classes:
+```
+.main-content {}
+
+.copyright {}
+
+.external-link {}
+```
+
+Never go specifically or unecessary:
+```
+.left {}
+
+.link {}
+
+.title-blue {}
+
+.intro-p {}
 ```
 
 ### Magic numbers and absolutes
